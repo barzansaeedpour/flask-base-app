@@ -23,8 +23,30 @@ virtualenv env
 source env/bin/activate
 ```
 
-## Install the packages
+## Installing the packages
+windows:
 ```
 pip install flask flask-sqlalchemy
 ```
+linux & mac:
+```
+pip3 install flask flask-sqlalchemy
+```
 
+## To run the project
+
+to create the database:
+```
+python
+```
+```
+>>> from app import db
+```
+```
+>>> db.create_all()
+```
+
+To run the project:
+```
+python app.py
+```
