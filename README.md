@@ -35,12 +35,12 @@ pip3 install flask flask-sqlalchemy
 
 ## To run the project
 
-to create the database:
+<!-- to create the database:
 ```
 python
 ```
 ```
->>> from app import db
+>>> from app import app, db
 ```
 ```
 >>> db.create_all()
@@ -49,4 +49,4 @@ python
 To run the project:
 ```
 python app.py
-```
+``` -->
