@@ -1,16 +1,29 @@
 
-1) Create a virtual environment (windows)
+## Setting up a virtual environment: 
 
+- windows (python 3.10):
+```
+py -3.10 -m pip install virtualenv
+```
 ```
 py -3.10 -m venv env
 ```
-
-2) Activate the virtual environment (windows)
 ```
 env\Scripts\activate
 ```
 
-2) Install the packages
+- linux & mac:
+```
+pip3 install virtualenv
+```
+```
+virtualenv env
+```
+```
+source env/bin/activate
+```
+
+## Install the packages
 ```
 pip install flask flask-sqlalchemy
 ```
