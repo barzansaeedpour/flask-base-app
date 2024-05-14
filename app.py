@@ -4,7 +4,9 @@ from datetime import datetime
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db' # Three forwarded slashes mean a relative path and four mean an absolute path
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db' # Three forwarded slashes mean a relative path and four mean an absolute path
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://User:Secret@localhost'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:mysecretpassword@localhost'
 db = SQLAlchemy(app)
 
 
@@ -60,6 +62,6 @@ def update(id):
 
 if __name__ == "__main__":
     # app.run(debug=True) 
-    app.run(debug=False, host='0.0.0.0')
     with app.app_context():
         db.create_all()
+    app.run(debug=False, host='0.0.0.0')
